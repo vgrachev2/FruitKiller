@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Base\IEdible.cs" />
-     <Compile Include="Assets\Scripts\Fruit.cs" />
-     <Compile Include="Assets\Scripts\FruitPositionGenerator.cs" />
+     <Compile Include="Assets\Scripts\Entity.cs" />
+     <Compile Include="Assets\Scripts\EntityPlacer.cs" />
+     <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityPositionInfo.cs" />
+     <Compile Include="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionGenerator.cs" />
+     <Compile Include="Assets\Scripts\EntityPositionCalculator\IEntityPositionGenerator.cs" />
      <Compile Include="Assets\Scripts\Helpers\ExposeProperties.cs" />
      <Compile Include="Assets\Scripts\Helpers\ExposePropertyAttribute.cs" />
   </ItemGroup>
