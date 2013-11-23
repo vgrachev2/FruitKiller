@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{A8E8C88E-C300-65FC-15FA-B5572DA6934D}</ProjectGuid>
+	<ProjectGuid>{6607028B-3F37-1AE5-E7FE-CC417835EA9F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -55,6 +55,12 @@
      <Compile Include="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionGenerator.cs" />
      <Compile Include="Assets\Scripts\EntityPositionCalculator\IEntityPositionGenerator.cs" />
      <Compile Include="Assets\Scripts\GameStarter.cs" />
+     <Compile Include="Assets\Scripts\IEntityFactory.cs" />
+     <Compile Include="Assets\Scripts\IEntityPlacer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{9BBD08CA-4606-891D-05B5-5F2DF02535AB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EntityFactory.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Entity.cs" Line="2" Column="7" />
+      <File FileName="c:\Users\drnor_000\Documents\FruitKillervG\Assets\Plugins\UnityDI\Container.cs" Line="38" Column="53" />
+      <File FileName="Assets\Plugins\Game.Common\ITouchConroller.cs" Line="6" Column="5" />
+      <File FileName="Assets\Plugins\Game.Common\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EntityFactory.cs" Line="4" Column="7" />
+      <File FileName="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionGenerator.cs" Line="22" Column="1" />
+      <File FileName="Assets\Scripts\GameStarter.cs" Line="49" Column="1" />
+      <File FileName="Assets\Plugins\Game.Common\MouseClickConroller.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKillervG\Assets\Scripts\EntityFactory.cs" line="26" />
+      <Breakpoint file="c:\Users\drnor_000\Documents\FruitKillervG\Assets\Plugins\UnityDI\Container.cs" line="119" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKillervG\Assets\Plugins\Game.Common\MouseClickConroller.cs" line="9" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
