@@ -54,7 +54,6 @@
      <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityPositionInfo.cs" />
      <Compile Include="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionGenerator.cs" />
      <Compile Include="Assets\Scripts\EntityPositionCalculator\IEntityPositionGenerator.cs" />
-     <Compile Include="Assets\Scripts\GameStart.cs" />
      <Compile Include="Assets\Scripts\GameStarter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

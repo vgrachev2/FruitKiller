@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Assets.Scripts.EntityPositionCalculator;
 using UnityEngine;
+using Assets.Scripts.EntityPositionCalculator.Generators;
 
 namespace Assets.Scripts
 {
@@ -13,29 +14,27 @@ namespace Assets.Scripts
         public string EntityTagName;
 
 		private void Start(){
+			PositionGenerator = new RectanglePositionGenerator ();
 			if (PositionGenerator == null)
 			{
 				Debug.Log("В скрипте, размещающий объекты по сцене не задан генератор позиции");
-				return;
+
 			}
-            EntityFactory=new EntityFactory(GameObject.FindGameObjectsWithTag(EntityTagName));
-			PlaceEntities(PositionGenerator.GeneratePositions(EntityFactory,
-                new EntityGeneratorProperties()
-                {
-                    BoundaryCenterCoordinate = new Vector3(0,0,0),
-                    BoundaryScale = new Vector3(10,10,10),
-                    
-                }));
+
+            EntityFactory = new EntityFactory("Prefabs/Entities");
+            PositionGenerator.GeneratePositions(EntityFactory,
+                    new EntityGeneratorProperties()
+                    {
+                        BoundaryCenterCoordinate = new Vector3(0, 0, 0),
+                        BoundaryScale = new Vector3(20, 20, 20),
+                        EntityDistance = new Vector2(1,1),
+                        EntityScale = new Vector3(1,1,0)
+                        
+                    });
 
 		}
 
 
-        private void PlaceEntities(IEnumerable<EntityPositionInfo> entitiesWithPosition)
-        {
-            foreach (var entity in entitiesWithPosition)
-            {
-                entity.Entity.transform.position = entity.EntityPosition;
-            }
-        }
+        
     }
 }
