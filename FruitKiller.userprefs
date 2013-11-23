@@ -1,8 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs">
+    <Files>
+      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs" Line="19" Column="1" />
+      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\GameStarter.cs" Line="15" Column="1" />
+      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Plugins\UnityDI\Container.cs" Line="31" Column="1" />
+      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Plugins\UnityDI\Providers\ActivatorObjectProvider.cs" Line="5" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="c:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs" line="51" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Plugins\UnityDI\DependencyAttribute.cs" line="8" />
+      <Breakpoint file="c:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs" line="17" />
+      <Breakpoint file="c:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\GameStarter.cs" line="27" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\GameStarter.cs" line="13" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\Scripts\EntityPlacer.cs" line="11" offsetX="621" offsetY="170" expression="PositionGenerator" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
