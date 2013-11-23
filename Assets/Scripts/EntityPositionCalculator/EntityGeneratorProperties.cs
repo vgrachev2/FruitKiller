@@ -11,5 +11,6 @@ namespace Assets.Scripts.EntityPositionCalculator
         public Vector3 BoundaryCenterCoordinate { get; set; }
         public Vector3 BoundaryScale { get; set; }
         public Vector3 EntityScale { get; set; }
+        public Vector2 EntityDistance { get; set; }
     }
 }

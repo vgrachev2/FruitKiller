@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using FruitKiller;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class EntityFactory:MonoBehaviour
     {
-        private IEnumerable<GameObject> _entities;
+        private IEnumerable<Object> _notCreatedPrefabs;
 
-        public EntityFactory(IEnumerable<GameObject> entities)
+        public EntityFactory(string pathToEntitiesPrefabs)
         {
-            _entities = entities;
+           _notCreatedPrefabs=Resources.LoadAll(pathToEntitiesPrefabs);
         }
 
-        public GameObject CreateRandomObject()
+        public GameObject CreateRandomObject(Vector3 position)
         {
-            return null;
+            int randomPrefabPosition = (int)Random.Range(0, _notCreatedPrefabs.Count());
+            return (GameObject)Instantiate(_notCreatedPrefabs.ElementAt(randomPrefabPosition), new Vector3(position.x, position.y, position.z), Quaternion.identity);
+
         }
     }
 }
