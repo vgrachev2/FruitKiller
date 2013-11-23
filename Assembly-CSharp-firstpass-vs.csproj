@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{A8E8C88E-C300-65FC-15FA-B5572DA6934D}</ProjectGuid>
+	<ProjectGuid>{17EC62FB-A0C7-69A2-E8AE-D2A483AF9852}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,16 +46,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Base\IEdible.cs" />
-     <Compile Include="Assets\Scripts\Entity.cs" />
-     <Compile Include="Assets\Scripts\EntityFactory.cs" />
-     <Compile Include="Assets\Scripts\EntityPlacer.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityGeneratorProperties.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityPositionInfo.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionGenerator.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\IEntityPositionGenerator.cs" />
-     <Compile Include="Assets\Scripts\GameStart.cs" />
-     <Compile Include="Assets\Scripts\GameStarter.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Container.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\ContainerException.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\ContainerKey.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\DependencyAttribute.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Finders\DefaultFinder.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Finders\IGameObjectFinder.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Finders\MaskFinder.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\IDependent.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\IProviderWrapper.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\ProviderWrapper.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\ActivatorObjectProvider.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\GameObjectProvider.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\IObjectProvider.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\InstanceProvider.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\ScenePathProvider.cs" />
+     <Compile Include="Assets\Plugins\UnityDI\Providers\SingletonProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

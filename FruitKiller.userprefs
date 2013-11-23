@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs">
     <Files>
       <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EntityPlacer.cs" Line="19" Column="1" />
-      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\GameStarter.cs" Line="15" Column="1" />
-      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Plugins\UnityDI\Container.cs" Line="31" Column="1" />
-      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Plugins\UnityDI\Providers\ActivatorObjectProvider.cs" Line="5" Column="1" />
+      <File FileName="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\GameStarter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
