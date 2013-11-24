@@ -10,6 +10,10 @@ namespace Assets.Scripts
 
 		public IEntityPositionGenerator PositionGenerator { private get; set; }
         public EntityFactory EntityFactory { get; set; }
+		public Vector3 BoundaryCenterCoordinate;
+		public Vector3 BoundaryScale;
+		public Vector3 EntityDistance;
+		public Vector3  EntityScale;
 
         public string EntityTagName;
 
@@ -25,10 +29,10 @@ namespace Assets.Scripts
             PositionGenerator.GeneratePositions(EntityFactory,
                     new EntityGeneratorProperties()
                     {
-                        BoundaryCenterCoordinate = new Vector3(0, 0, 0),
-                        BoundaryScale = new Vector3(20, 20, 20),
-                        EntityDistance = new Vector2(1,1),
-                        EntityScale = new Vector3(1,1,0)
+				BoundaryCenterCoordinate = BoundaryCenterCoordinate,
+                        BoundaryScale = BoundaryScale,
+				EntityDistance = EntityDistance,
+                        EntityScale = EntityScale
                         
                     });
 
