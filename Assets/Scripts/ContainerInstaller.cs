@@ -2,6 +2,7 @@
 using Assets.Scripts.EntityPositionCalculator;
 using Assets.Scripts.EntityPositionCalculator.Generators;
 using Assets.Scripts.LevelControllers;
+using Assets.Scripts.MenuButtons;
 using Assets.Scripts.Score;
 using FruitKiller;
 using Game.Common;
@@ -17,6 +18,7 @@ namespace Assets.Scripts {
 			container.RegisterType<IEntityPositionPlacer, RectanglePositionPlacer>();
 			container.RegisterType<IEntityPlacer, EntityPlacer>();
 			container.RegisterType<ITouchConroller, MouseClickConroller>();
+			container.RegisterType<IMenuButtonFactory, MenuButtonFactory>();
 			container.RegisterType<IScorePrinter, ScorePrinter>();
 			container.RegisterInstance<IDIContainer>(container);
 			var entityFactory = new EntityFactory("Prefabs/Entities");

@@ -7,6 +7,7 @@ namespace Assets.Scripts {
 		{
 			var container = new ContainerInstaller().Install();
 			var controller = container.Resolve<MainMenuController>();
+			controller.BildStartButton();
 		}
 	}
 }

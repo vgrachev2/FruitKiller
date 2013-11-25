@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Base\IEdible.cs" />
+     <Compile Include="Assets\Scripts\ContainerInstaller.cs" />
      <Compile Include="Assets\Scripts\Entity.cs" />
      <Compile Include="Assets\Scripts\EntityFactory.cs" />
      <Compile Include="Assets\Scripts\EntityPlacer.cs" />
@@ -57,6 +58,11 @@
      <Compile Include="Assets\Scripts\GameStarter.cs" />
      <Compile Include="Assets\Scripts\IEntityFactory.cs" />
      <Compile Include="Assets\Scripts\IEntityPlacer.cs" />
+     <Compile Include="Assets\Scripts\LevelControllers\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\MainMenuStarter.cs" />
+     <Compile Include="Assets\Scripts\MenuButtons\IMenuButtonFactory.cs" />
+     <Compile Include="Assets\Scripts\MenuButtons\MenuButton.cs" />
+     <Compile Include="Assets\Scripts\MenuButtons\MenuButtonFactory.cs" />
      <Compile Include="Assets\Scripts\Score\IScoreManager.cs" />
      <Compile Include="Assets\Scripts\Score\IScorePrinter.cs" />
      <Compile Include="Assets\Scripts\Score\ScoreManager.cs" />
