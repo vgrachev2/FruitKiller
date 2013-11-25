@@ -1,44 +1,41 @@
 using System.Collections.Generic;
 using Assets.Scripts.EntityPositionCalculator;
+using UnityDI;
 using UnityEngine;
 using Assets.Scripts.EntityPositionCalculator.Generators;
 
 namespace Assets.Scripts
 {
-    public class EntityPlacer:MonoBehaviour
+    public class EntityPlacer:IEntityPlacer
     {
+        [Dependency]
+		public IEntityPositionPlacer PositionGenerator { private get; set; }
 
-		public IEntityPositionGenerator PositionGenerator { private get; set; }
-        public EntityFactory EntityFactory { get; set; }
-		public Vector3 BoundaryCenterCoordinate;
-		public Vector3 BoundaryScale;
-		public Vector3 EntityDistance;
-		public Vector3  EntityScale;
+        [Dependency]
+        public IEntityFactory EntityFactory { private get; set; }
+
 
         public string EntityTagName;
 
-		private void Start(){
-			PositionGenerator = new RectanglePositionGenerator ();
+        public void PlaceEntity(Vector3 boundaryCenterCoordinate, Vector3 boundaryScale, Vector3 entityDistance, Vector3 entityScale)
+        {
+
 			if (PositionGenerator == null)
 			{
 				Debug.Log("В скрипте, размещающий объекты по сцене не задан генератор позиции");
 
 			}
 
-            EntityFactory = new EntityFactory("Prefabs/Entities");
-            PositionGenerator.GeneratePositions(EntityFactory,
-                    new EntityGeneratorProperties()
-                    {
-				BoundaryCenterCoordinate = BoundaryCenterCoordinate,
-                        BoundaryScale = BoundaryScale,
-				EntityDistance = EntityDistance,
-                        EntityScale = EntityScale
-                        
+            PositionGenerator.GeneratePositions(
+                    EntityFactory,
+                    new EntityPositionPlacerProperties() {
+				        BoundaryCenterCoordinate = boundaryCenterCoordinate,
+                        BoundaryScale = boundaryScale,
+				        EntityDistance = entityDistance,
+                        EntityScale = entityScale
                     });
 
 		}
 
-
-        
     }
 }
