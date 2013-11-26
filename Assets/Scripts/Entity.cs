@@ -3,7 +3,6 @@ using FruitKiller.Base;
 using Game.Common;
 using UnityDI;
 using UnityEngine;
-using System.Runtime.CompilerServices;
 
 namespace FruitKiller
 {
@@ -14,10 +13,10 @@ namespace FruitKiller
         public bool Edible;
         public string Name;
 
-        [UnityDI.Dependency]
+        [Dependency]
         public ITouchConroller Conroller  { private get; set; }
 
-        [UnityDI.Dependency]
+        [Dependency]
         public IScoreManager ScoreManager { private get; set; }
 
         // Use this for initialization
