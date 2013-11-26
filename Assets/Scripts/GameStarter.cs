@@ -15,10 +15,12 @@ namespace Assets.Scripts
         public Vector3 EntityDistance;
         public IScorePrinter _scorePrinter;
         public GUIText ScorePlace;
-
         public Vector3 EntityScale;
-		private Vector3 _boundaryCenterCoordinate;
-		private Vector3 _boundaryScale;
+        private Vector3 _boundaryCenterCoordinate;
+        private Vector3 _boundaryScale;
+
+        private IEntityPlacer _entityPlacer;
+
 
 		
 		public void Start()
@@ -26,13 +28,16 @@ namespace Assets.Scripts
 			SetupContainer();
 			_boundaryCenterCoordinate = Plane.transform.position;
 			_boundaryScale = Plane.transform.localScale;
-			_container.Resolve<IEntityPlacer>().PlaceEntity(_boundaryCenterCoordinate,_boundaryScale,EntityDistance,EntityScale);
+		    _entityPlacer = _container.Resolve<IEntityPlacer>();
+            _entityPlacer.PlaceEntity(_boundaryCenterCoordinate, _boundaryScale, EntityDistance, EntityScale);
+
 		    _scorePrinter=_container.Resolve<IScorePrinter>();
             _scorePrinter.SetPlaceForPrint(ScorePlace);
 		}
 		
 		public void Update()
 		{
+            _entityPlacer.CreateEntities();
 			_scorePrinter.Print();
 		}
 		

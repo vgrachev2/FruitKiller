@@ -11,6 +11,7 @@ namespace Assets.Scripts.EntityPositionCalculator.Generators
     {
         public IEnumerable<EntityPositionInfo> GeneratePositions(IEntityFactory factory, EntityPositionPlacerProperties properties)
         {
+            var entityPositionsInfoes = new List<EntityPositionInfo>();
             float startX = properties.BoundaryCenterCoordinate.x - (properties.BoundaryScale.x / 2)+properties.EntityDistance.x/2;
             float startY = properties.BoundaryCenterCoordinate.y + (properties.BoundaryScale.y / 2) - properties.EntityDistance.y / 2;
             var startPosition = new Vector2(startX, startY);
@@ -21,12 +22,12 @@ namespace Assets.Scripts.EntityPositionCalculator.Generators
             {
                 for (int j = 0; j < numberForX; j++)
                 {
-                    factory.CreateRandomObject(new Vector3(startX + (properties.EntityDistance.x + properties.EntityScale.x) * j, startY - (properties.EntityDistance.y + properties.EntityScale.y) * i, 0));
+                    entityPositionsInfoes.Add(new EntityPositionInfo() { EntityPosition = new Vector3(startX + (properties.EntityDistance.x + properties.EntityScale.x) * j, startY - (properties.EntityDistance.y + properties.EntityScale.y) * i, 0),Entity = factory.GetRandomPrefab()});
                 }
             }
 
 
-            return null;
+            return entityPositionsInfoes;
         }
 
     }

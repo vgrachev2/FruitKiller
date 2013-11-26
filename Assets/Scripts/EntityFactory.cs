@@ -23,5 +23,21 @@ namespace Assets.Scripts {
 			return entity;
 
 		}
-	}
+
+	    public GameObject CreateObject(Object prefab,Vector3 position)
+	    {
+            var entity = Instantiate(prefab, position, Quaternion.identity) as GameObject;
+            var entityBehaivor = entity.GetComponent<Entity>();
+            DIContainer.BuildUp(entityBehaivor);
+            return entity;
+	    }
+
+
+        public GameObject GetRandomPrefab()
+        {
+            int randomPrefabPosition = (int)Random.Range(0, _notCreatedPrefabs.Count());
+		
+            return _notCreatedPrefabs.ElementAt(randomPrefabPosition) as GameObject;
+        }
+    }
 }
