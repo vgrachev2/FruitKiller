@@ -12,7 +12,7 @@ namespace Assets.Scripts.MenuButtons
 		public void BuildButton(string levelName, string prefabName, Vector3 position)
 		{
 			var prefab = Resources.Load(prefabName);
-			var component = Instantiate(prefab, new Vector3(position.x, position.y, position.z), Quaternion.identity) as GameObject;
+			var component = Instantiate(prefab, position, Quaternion.identity) as GameObject;
 			component.AddComponent<MenuButton>();
 			var menuButton = component.GetComponent<MenuButton>();
 			menuButton.LevelName = levelName;
