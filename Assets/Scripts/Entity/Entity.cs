@@ -1,10 +1,9 @@
 ﻿using Assets.Scripts.Score;
-using FruitKiller.Base;
 using Game.Common;
 using UnityDI;
 using UnityEngine;
 
-namespace FruitKiller
+namespace Assets.Scripts.Entity
 {
     public class Entity : MonoBehaviour
     {

@@ -48,16 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Base\IEdible.cs" />
      <Compile Include="Assets\Scripts\ContainerInstaller.cs" />
-     <Compile Include="Assets\Scripts\Entity.cs" />
-     <Compile Include="Assets\Scripts\EntityFactory.cs" />
-     <Compile Include="Assets\Scripts\EntityPlacer.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityPositionInfo.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\EntityPositionPlacerProperties.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\Generators\RectanglePositionPlacer.cs" />
-     <Compile Include="Assets\Scripts\EntityPositionCalculator\IEntityPositionPlacer.cs" />
-     <Compile Include="Assets\Scripts\GameStarter.cs" />
-     <Compile Include="Assets\Scripts\IEntityFactory.cs" />
-     <Compile Include="Assets\Scripts\IEntityPlacer.cs" />
+     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
+     <Compile Include="Assets\Scripts\Entity\EntityFactory.cs" />
+     <Compile Include="Assets\Scripts\Entity\IEntityFactory.cs" />
+     <Compile Include="Assets\Scripts\Grid\EntityGrid.cs" />
+     <Compile Include="Assets\Scripts\Grid\EntityGridManager.cs" />
+     <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\EntityPositionPlacerProperties.cs" />
+     <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" />
+     <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\IEntityPositionPlacer.cs" />
+     <Compile Include="Assets\Scripts\Grid\GridItem.cs" />
+     <Compile Include="Assets\Scripts\Grid\IEntityGridManager.cs" />
+     <Compile Include="Assets\Scripts\LevelControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\MainMenuStarter.cs" />
      <Compile Include="Assets\Scripts\MenuButtons\IMenuButtonFactory.cs" />

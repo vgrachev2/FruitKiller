@@ -1,6 +1,7 @@
-﻿using System.Runtime.InteropServices;
-using Assets.Scripts.EntityPositionCalculator;
-using Assets.Scripts.EntityPositionCalculator.Generators;
+﻿using Assets.Scripts.Entity;
+using Assets.Scripts.Grid;
+using Assets.Scripts.Grid.EntityPositionCalculator;
+using Assets.Scripts.Grid.EntityPositionCalculator.Generators;
 using Assets.Scripts.LevelControllers;
 using Assets.Scripts.MenuButtons;
 using Assets.Scripts.Score;
@@ -14,9 +15,10 @@ namespace Assets.Scripts {
 		{
 			var container = new Container();
 			container.RegisterType<MainMenuController>();
-			container.RegisterType<Entity>();
-			container.RegisterType<IEntityPositionPlacer, RectanglePositionPlacer>();
-			container.RegisterType<IEntityPlacer, EntityPlacer>();
+            container.RegisterType<GameController>();
+			container.RegisterType<Entity.Entity>();
+            container.RegisterType<IEntityGridCreator, RectangleGridCreator>();
+			container.RegisterType<IEntityGridManager, EntityGridManager>();
 			container.RegisterType<ITouchConroller, MouseClickConroller>();
 			container.RegisterType<IMenuButtonFactory, MenuButtonFactory>();
 			container.RegisterType<IScorePrinter, ScorePrinter>();
