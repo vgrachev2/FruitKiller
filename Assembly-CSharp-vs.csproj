@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\IEntityPositionPlacer.cs" />
      <Compile Include="Assets\Scripts\Grid\GridItem.cs" />
+     <Compile Include="Assets\Scripts\Grid\GridItemState.cs" />
      <Compile Include="Assets\Scripts\Grid\IEntityGridManager.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\MainMenuController.cs" />

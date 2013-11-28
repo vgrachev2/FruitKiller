@@ -5,7 +5,7 @@ namespace Assets.Scripts.Grid.EntityPositionCalculator.Generators
 {
     public class RectangleGridCreator: IEntityGridCreator
     {
-        public EntityGrid EntityGridCreate(IEntityFactory factory, EntityPositionPlacerProperties properties)
+        public EntityGrid EntityGridCreate(EntityPositionPlacerProperties properties)
         {
          
             float startX = properties.BoundaryCenterCoordinate.x - (properties.BoundaryScale.x / 2) + properties.EntityDistance.x / 2;
@@ -22,7 +22,7 @@ namespace Assets.Scripts.Grid.EntityPositionCalculator.Generators
                     var entityPosition = new Vector3(
                         startX + (properties.EntityDistance.x + properties.EntityScale.x)*j,
                         startY - (properties.EntityDistance.y + properties.EntityScale.y)*i, 0);
-                    grid.SetGridItem(i,j,new GridItem(position:entityPosition,entity:factory.GetRandomPrefab()));
+                    grid.SetGridItem(i,j,new GridItem(position:entityPosition));
                 }
             }
             return grid;

@@ -32,15 +32,21 @@ namespace Assets.Scripts.Entity
             {
                 if (Conroller.Touched(this.gameObject))
                 {
-                    if (Edible)
-                    {
-                        ScoreManager.PlusValueToScore(_entityScore);
-                    }
-                    else
-                    {
-                        ScoreManager.MinusValueToScore(_entityScore);
-                    }
+                    ChangeScore();
+                    Destroy(this.gameObject);
                 }
+            }
+        }
+
+        private void ChangeScore()
+        {
+            if (Edible)
+            {
+                ScoreManager.PlusValueToScore(_entityScore);
+            }
+            else
+            {
+                ScoreManager.MinusValueToScore(_entityScore);
             }
         }
 
