@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileCD2C09EEF7113C4C945019E4F9D9689F/RelativePriority/@EntryValue">1</s:Double>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileCD2C09EEF7113C4C945019E4F9D9689F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=CD2C09EEF7113C4C945019E4F9D9689F/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=CD2C09EEF7113C4C945019E4F9D9689F/RelativePath/@EntryValue">..\..\..\Downloads\CurrentSettings.vssettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=CD2C09EEF7113C4C945019E4F9D9689F/AbsolutePath/@EntryValue">C:\Users\drnor_000\Downloads\CurrentSettings.vssettings</s:String></wpf:ResourceDictionary>
