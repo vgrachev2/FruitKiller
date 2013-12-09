@@ -8,6 +8,7 @@ using Assets.Scripts.Score;
 using FruitKiller;
 using Game.Common;
 using UnityDI;
+using Assets.Scripts.Score.ScorePlane;
 
 namespace Assets.Scripts {
 	public class ContainerInstaller {
@@ -22,12 +23,16 @@ namespace Assets.Scripts {
 			container.RegisterType<ITouchConroller, MouseClickConroller>();
 			container.RegisterType<IMenuButtonFactory, MenuButtonFactory>();
 			container.RegisterType<IScorePrinter, ScorePrinter>();
+
 			container.RegisterInstance<IDIContainer>(container);
 			var entityFactory = new EntityFactory("Prefabs/Entities");
 			container.BuildUp(entityFactory);
 			container.RegisterInstance<IEntityFactory>(entityFactory);
 			var scoreManager = new ScoreManager();
 			container.RegisterInstance<IScoreManager>(scoreManager);
+			var scorePlaneCreator = new ScorePlaneManipulator(10);
+		
+			container.RegisterInstance<IScorePlaneManipulator> (scorePlaneCreator);
 			return container;
 		}
 	}

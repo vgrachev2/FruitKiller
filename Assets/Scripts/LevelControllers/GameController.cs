@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Assets.Scripts.Grid;
 using Assets.Scripts.Score;
+using Assets.Scripts.Score.ScorePlane;
 using UnityEngine;
 
 namespace Assets.Scripts.LevelControllers
@@ -8,12 +9,14 @@ namespace Assets.Scripts.LevelControllers
     public class GameController:MonoBehaviour
     {
 		public GameObject Plane;
+        public GameObject ProgressPlane;
         public Vector3 EntityDistance;
         public Vector3 EntityScale;
         public GUIText ScorePlace;
         
         public IScorePrinter _scorePrinter;
         private IEntityGridManager _entityGridManager;
+        private IScorePlaneManipulator _scorePlaneManuManipulator;
 
 		
 		public void Start()
@@ -22,10 +25,17 @@ namespace Assets.Scripts.LevelControllers
 		    var boundaryCenterCoordinate = Plane.transform.position;
 			var boundaryScale = Plane.transform.localScale;
 		    _entityGridManager = container.Resolve<IEntityGridManager>();
-			Debug.Log("dadwa");
             _scorePrinter = container.Resolve<IScorePrinter>();
+		    var scoreManager = container.Resolve<IScoreManager>();
+            
             _entityGridManager.InitializationGrid(boundaryCenterCoordinate, boundaryScale, EntityDistance, EntityScale);
             _scorePrinter.SetPlaceForPrint(ScorePlace);
+		    _scorePlaneManuManipulator = container.Resolve<IScorePlaneManipulator>();
+			_scorePlaneManuManipulator.WorkPlane = ProgressPlane;
+            _scorePlaneManuManipulator.Create();
+
+		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
+
             StartCoroutine(Coroutine());
 		}
 		
@@ -33,6 +43,7 @@ namespace Assets.Scripts.LevelControllers
 		{
 		    _entityGridManager.InitializationEntitiesInGrid();
 			_scorePrinter.Print();
+            _scorePlaneManuManipulator.DeleteFirstPlaneItem();
 		}
 
         public IEnumerator Coroutine()
@@ -41,7 +52,7 @@ namespace Assets.Scripts.LevelControllers
             {
                 float time = Time.realtimeSinceStartup;
                 _entityGridManager.RecreateDestroyedEntity();
-				Debug.Log("Корутина вызвалась");
+
                 yield return new WaitForSeconds(2.00f);
             }
         }
