@@ -6,5 +6,6 @@ namespace Assets.Scripts.Grid
     {
         void InitializationGrid(Vector3 boundaryCenterCoordinate, Vector3 boundaryScale, Vector3 entityDistance, Vector3 entityScale);
         void InitializationEntitiesInGrid();
+        void RecreateDestroyedEntity();
     }
 }

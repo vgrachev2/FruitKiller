@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Game.Common;
+using UnityDI;
+using UnityEngine;
 
 namespace Assets.Scripts.Grid
 {
@@ -6,11 +8,16 @@ namespace Assets.Scripts.Grid
     {
         private Vector3 _position;
         private GameObject _entity;
+        private GridItemState _state=GridItemState.NotInitilization;
 
-        public GridItem(Vector3 position, GameObject entity)
+        [Dependency]
+        public ITouchConroller Conroller { private get; set; }
+
+
+        public GridItem(Vector3 position)
         {
             _position = position;
-            _entity = entity;
+
         }
 
         public Vector3 Position
@@ -21,8 +28,35 @@ namespace Assets.Scripts.Grid
 
         public GameObject Entity
         {
-            get { return _entity; }
-            set { _entity = value; }
+            get
+            {
+                return _entity;
+            }
+            set
+            {
+                _entity = value;
+                if (value != null)
+                {
+                    _state=GridItemState.Created;
+                }
+            }
         }
+
+        public GridItemState State
+        {
+            get
+            {
+				if (_state == GridItemState.Created && Entity == null)
+				{
+					_state = GridItemState.Deleted;
+				}
+                return _state;
+            }
+            set
+            {
+                _state = value;
+            }
+        }
+
     }
 }

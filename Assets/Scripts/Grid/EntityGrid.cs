@@ -23,23 +23,19 @@ namespace Assets.Scripts.Grid
             _items[columnIndex, rowIndex] = item;
         }
 
-       
-
-        public GridItem GetRandomEmptyElement()
+        public GridItem GetRandomElementByState(GridItemState state)
         {
-            var emptyGridItems = GetEmptyGridItems();
-			var count = emptyGridItems.Count();
-			Debug.Log (count);
-            if (emptyGridItems.Any())
+            var gridItems = GetGridItemsByState(state);
+            if (gridItems.Any())
             {
-               return GetRandomElementFromCollection(emptyGridItems);
+               return GetRandomElementFromCollection(gridItems);
             }
             return null;
         }
 
-        private IEnumerable<GridItem> GetEmptyGridItems()
+        private IEnumerable<GridItem> GetGridItemsByState(GridItemState state)
         {
-			return ArrayExtensions.ToEnumerable<GridItem> (_items).Where(x => x.Entity.activeInHierarchy == false);
+			return ArrayExtensions.ToEnumerable<GridItem> (_items).Where(x => x.State== state);
         }
 
         private GridItem GetRandomElementFromCollection(IEnumerable<GridItem> items)
