@@ -11,12 +11,13 @@ namespace Assets.Scripts.MenuButtons {
 		[Dependency]
 		public ITouchConroller Conroller { private get; set; }
 
-		public string LevelName;
+		public Action Action;
 
 		void Update() {
 			if (Conroller != null) {
-				if (Conroller.Touched(this.gameObject)) {
-					Application.LoadLevel(LevelName);
+				if (Conroller.BeginTouched(this.gameObject))
+				{
+				    Action();
 				}
 			}
 		}

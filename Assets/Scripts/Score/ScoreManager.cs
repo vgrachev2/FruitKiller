@@ -30,7 +30,7 @@ namespace Assets.Scripts.Score
         public void PlusValueToScore(int value)
         {
             _score += value;
-            ScoreManipulator.AddNewPlaneItem();
+           // ScoreManipulator.AddNewPlaneItem();
 			
         }
 

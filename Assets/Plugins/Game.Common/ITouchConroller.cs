@@ -4,6 +4,8 @@ namespace Game.Common
 {
     public interface ITouchConroller
     {
-        bool Touched(GameObject gameObject);
+        bool BeginTouched(GameObject gameObject);
+
+        bool CompleteTouched(GameObject gameObject);
     }
 }

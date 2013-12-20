@@ -30,7 +30,7 @@ namespace Assets.Scripts.Entity
         {
             if (Conroller != null)
             {
-                if (Conroller.Touched(this.gameObject))
+                if (Conroller.BeginTouched(this.gameObject))
                 {
                     ChangeScore();
                     Destroy(this.gameObject);

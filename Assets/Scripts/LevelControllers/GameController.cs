@@ -3,6 +3,7 @@ using Assets.Scripts.Grid;
 using Assets.Scripts.Score;
 using Assets.Scripts.Score.ScorePlane;
 using UnityEngine;
+using Assets.Plugins.Game.Common;
 
 namespace Assets.Scripts.LevelControllers
 {
@@ -13,11 +14,10 @@ namespace Assets.Scripts.LevelControllers
         public Vector3 EntityDistance;
         public Vector3 EntityScale;
         public GUIText ScorePlace;
-        
         public IScorePrinter _scorePrinter;
         private IEntityGridManager _entityGridManager;
         private IScorePlaneManipulator _scorePlaneManuManipulator;
-
+        private ICountdownTimer _countdownTimer;
 		
 		public void Start()
 		{
@@ -27,15 +27,16 @@ namespace Assets.Scripts.LevelControllers
 		    _entityGridManager = container.Resolve<IEntityGridManager>();
             _scorePrinter = container.Resolve<IScorePrinter>();
 		    var scoreManager = container.Resolve<IScoreManager>();
-            
             _entityGridManager.InitializationGrid(boundaryCenterCoordinate, boundaryScale, EntityDistance, EntityScale);
             _scorePrinter.SetPlaceForPrint(ScorePlace);
 		    _scorePlaneManuManipulator = container.Resolve<IScorePlaneManipulator>();
 			_scorePlaneManuManipulator.WorkPlane = ProgressPlane;
             _scorePlaneManuManipulator.Create();
-
+			var audioPlayer = container.Resolve<IAudioPlayer> ();
+			audioPlayer.Play ("victory");
 		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
-
+		    _countdownTimer = container.Resolve<ICountdownTimer>();
+            _countdownTimer.StartCountdown(30f, () => Application.LoadLevel("MainMenu"));
             StartCoroutine(Coroutine());
 		}
 		
@@ -43,6 +44,7 @@ namespace Assets.Scripts.LevelControllers
 		{
 		    _entityGridManager.InitializationEntitiesInGrid();
 			_scorePrinter.Print();
+            _countdownTimer.Update();
             _scorePlaneManuManipulator.DeleteFirstPlaneItem();
 		}
 
@@ -55,6 +57,11 @@ namespace Assets.Scripts.LevelControllers
 
                 yield return new WaitForSeconds(2.00f);
             }
+        }
+
+        void OnGUI()
+        {
+            _countdownTimer.OnGUI();
         }
 		
     }

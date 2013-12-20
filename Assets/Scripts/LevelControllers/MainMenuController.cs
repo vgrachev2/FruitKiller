@@ -8,9 +8,9 @@ namespace Assets.Scripts.LevelControllers {
 		[Dependency]
 		public IMenuButtonFactory ButtonFactory { private get; set; }
 
-		public void BildStartButton()
+		public void BildStartButton(GameObject plane)
 		{
-			ButtonFactory.BuildButton("GameScene", "Prefabs/Buttons/StartButton", new Vector3(0, 0, 0));
+			ButtonFactory.BuildButton(() => Application.LoadLevel("MakeChoiseCharacter"), "Prefabs/Buttons/StartButton", new Vector3(0, -2, -5),plane);
 		}
 	}
 }
