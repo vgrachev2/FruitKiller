@@ -2,12 +2,15 @@
 using UnityEngine;
 
 namespace Assets.Scripts {
-	public class MainMenuStarter : MonoBehaviour {
+	public class MainMenuStarter : MonoBehaviour
+	{
+	    public GameObject MenuPlaneLocal;
+
 		public void Start()
 		{
 			var container = new ContainerInstaller().Install();
 			var controller = container.Resolve<MainMenuController>();
-			controller.BildStartButton();
+			controller.BildStartButton(MenuPlaneLocal);
 		}
 	}
 }

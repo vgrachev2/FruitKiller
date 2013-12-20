@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.Score
 {
@@ -13,8 +14,9 @@ namespace Assets.Scripts.Score
         {
             if (ScoreManager != null)
             {
-                _guiText.text = "Score: " + ScoreManager.Score;
-                Debug.Log("Вывел счет");
+				if(_guiText!=null){
+                 _guiText.text = "Score: " + ScoreManager.Score;
+				}
             }
              
         }

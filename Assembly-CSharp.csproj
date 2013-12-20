@@ -46,7 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Base\AudioBehaviorBase.cs" />
      <Compile Include="Assets\Scripts\Base\IEdible.cs" />
+     <Compile Include="Assets\Scripts\Base\OnClickAudioBehavior.cs" />
+     <Compile Include="Assets\Scripts\Base\OnDestroyAudioBehavior.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelectStarter.cs" />
      <Compile Include="Assets\Scripts\ContainerInstaller.cs" />
      <Compile Include="Assets\Scripts\Entity\Entity.cs" />
      <Compile Include="Assets\Scripts\Entity\EntityFactory.cs" />
@@ -59,15 +63,21 @@
      <Compile Include="Assets\Scripts\Grid\GridItem.cs" />
      <Compile Include="Assets\Scripts\Grid\GridItemState.cs" />
      <Compile Include="Assets\Scripts\Grid\IEntityGridManager.cs" />
+     <Compile Include="Assets\Scripts\LevelControllers\CharacterSelectController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\MainMenuStarter.cs" />
      <Compile Include="Assets\Scripts\MenuButtons\IMenuButtonFactory.cs" />
      <Compile Include="Assets\Scripts\MenuButtons\MenuButton.cs" />
      <Compile Include="Assets\Scripts\MenuButtons\MenuButtonFactory.cs" />
+     <Compile Include="Assets\Scripts\Score\CountdownTimer.cs" />
+     <Compile Include="Assets\Scripts\Score\ICountdownTimer.cs" />
      <Compile Include="Assets\Scripts\Score\IScoreManager.cs" />
      <Compile Include="Assets\Scripts\Score\IScorePrinter.cs" />
      <Compile Include="Assets\Scripts\Score\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\Score\ScorePlane\IScorePlaneManipulator.cs" />
+     <Compile Include="Assets\Scripts\Score\ScorePlane\ScorePlaneItem.cs" />
+     <Compile Include="Assets\Scripts\Score\ScorePlane\ScorePlaneManipulator.cs" />
      <Compile Include="Assets\Scripts\Score\ScorePrinter.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,32 +1,31 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\drnor_000\Documents\FruitKiller\Assets\Plugins\UnityDI\Container.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelControllers\GameController.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="25" Column="20" />
+      <File FileName="Assets\Scripts\Score\ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Score\ScorePrinter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Score\ScorePlane\ScorePlaneItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Score\ScorePlane\ScorePlaneManipulator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Grid\GridItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Grid\EntityPositionCalculator\EntityPositionPlacerProperties.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Grid\EntityGridManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\drnor_000\Documents\FruitKiller\Assets\Plugins\UnityDI\Container.cs" Line="20" Column="48" />
+      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="47" Column="1" />
+      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" selected="True" />
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Plugins" expanded="True">
-              <Node name="UnityDI" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Plugins\Game.Common\MultiTouchConroller.cs" line="9" />
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="42" />
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="29" />
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="34" />
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="21" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="24" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\LevelControllers\GameController.cs" line="30" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="11" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="12" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="13" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="15" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="16" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="17" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="19" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Grid\EntityPositionCalculator\Generators\RectangleGridCreator.cs" line="18" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
