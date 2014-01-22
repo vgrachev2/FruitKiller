@@ -24,12 +24,17 @@ namespace Assets.Scripts.Score
         {
             if (_showTimer)
             {
+				if(_timer==0){
+					return;
+				}
+
                 _timer -= Time.deltaTime;
 
-                if (_timer < 10)
+				if (_timer < 10)
                 {
                     Debug.Log("TEN SECONDS LEFT !");
                 }
+
 
                 if (_timer <= 0)
                 {
@@ -42,7 +47,7 @@ namespace Assets.Scripts.Score
 
         public void OnGUI() 
         {
-            GUI.Label(new Rect(10, 10, 150, 20), String.Format("{0:00}:{1:00}", _timer / 60.0, _timer % 60.0)); 
+            GUI.Label(new Rect(10, 10, 150, 20), String.Format("{0:00}:{1:00}", _timer / 60.0, _timer % 60.0));
         }
     }
 }
