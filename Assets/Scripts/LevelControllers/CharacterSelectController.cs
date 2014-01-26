@@ -23,6 +23,13 @@ namespace Assets.Scripts.LevelControllers {
                 PlayerPrefs.Save();
                 Application.LoadLevel("GameScene");
             }, "Prefabs/characters/Dog", new Vector3(0.704466f, -0.9775231f, 0), plane);
+
+            ButtonFactory.BuildButton(() =>
+            {
+                PlayerPrefs.SetString("ChoisedCharacter", "Cat");
+                PlayerPrefs.Save();
+                Application.LoadLevel("GameScene");
+            }, "Prefabs/characters/Cat", new Vector3(-0.3894792f, 0.5552426f, 0), plane);
 		}
 	}
 }

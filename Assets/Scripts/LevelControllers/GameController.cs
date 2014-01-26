@@ -4,21 +4,24 @@ using Assets.Scripts.Score;
 using Assets.Scripts.Score.ScorePlane;
 using UnityEngine;
 using Assets.Plugins.Game.Common;
+using Assets.Scripts.MenuButtons;
 
 namespace Assets.Scripts.LevelControllers
 {
     public class GameController:MonoBehaviour
     {
 		public GameObject Plane;
-        public GameObject ProgressPlane;
+      
         public Vector3 EntityDistance;
         public Vector3 EntityScale;
         public GUIText ScorePlace;
+        public GameObject IncorrectScorePlace; 
+        public GameObject CorrectScorePlace; 
         public IScorePrinter _scorePrinter;
         private IEntityGridManager _entityGridManager;
         private IScorePlaneManipulator _scorePlaneManuManipulator;
         private ICountdownTimer _countdownTimer;
-		
+		private IMenuButtonFactory _menuButtonFactory;
 		public void Start()
 		{
 		    var container = new ContainerInstaller().Install();
@@ -26,26 +29,29 @@ namespace Assets.Scripts.LevelControllers
 			var boundaryScale = Plane.transform.localScale;
 		    _entityGridManager = container.Resolve<IEntityGridManager>();
             _scorePrinter = container.Resolve<IScorePrinter>();
+			_menuButtonFactory = container.Resolve<IMenuButtonFactory>();
 		    var scoreManager = container.Resolve<IScoreManager>();
             _entityGridManager.InitializationGrid(boundaryCenterCoordinate, boundaryScale, EntityDistance, EntityScale);
-            _scorePrinter.SetPlaceForPrint(ScorePlace);
-		    _scorePlaneManuManipulator = container.Resolve<IScorePlaneManipulator>();
-			_scorePlaneManuManipulator.WorkPlane = ProgressPlane;
-            _scorePlaneManuManipulator.Create();
 			var audioPlayer = container.Resolve<IAudioPlayer> ();
 			audioPlayer.Play ("victory");
 		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
 		    _countdownTimer = container.Resolve<ICountdownTimer>();
-            _countdownTimer.StartCountdown(30f, () => Application.LoadLevel("MainMenu"));
+            _countdownTimer.StartCountdown(30f, ShowMenu);
             StartCoroutine(Coroutine());
+			BuildSelectedCharacter ();
 		}
+
+        public void ShowMenu()
+        {
+            var prefab = Resources.Load("Prefabs/FinishMenu");
+            Instantiate(prefab, new Vector3(0, 0,0), Quaternion.identity);
+        }
 		
 		public void Update()
 		{
 		    _entityGridManager.InitializationEntitiesInGrid();
-			_scorePrinter.Print();
             _countdownTimer.Update();
-            _scorePlaneManuManipulator.DeleteFirstPlaneItem();
+           
 		}
 
         public IEnumerator Coroutine()
@@ -62,7 +68,15 @@ namespace Assets.Scripts.LevelControllers
         void OnGUI()
         {
             _countdownTimer.OnGUI();
+            _scorePrinter.Print(CorrectScorePlace.transform.position, IncorrectScorePlace.transform.position);
         }
-		
+
+		public void BuildSelectedCharacter(){
+			var selectedCharacter = PlayerPrefs.GetString ("ChoisedCharacter");
+            var prefab = Resources.Load("Prefabs/characters/GameSceneCharactersPrefabs/" + selectedCharacter);
+			var component = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+			//component.transform.parent = Plane.transform;
+            component.transform.localPosition = new Vector3(3.103868f, 0.6147761f, 0);
+		}
     }
 }

@@ -16,7 +16,9 @@ namespace Assets.Plugins.Game.Common
 			AudioClipLoader = new AudioClipLoader ();
             var audioClip = AudioClipLoader.Load(name);
 			var gameObject = GameObject.FindWithTag("MainCamera");
-			gameObject.audio.PlayOneShot(audioClip,0.7f);
+			if (gameObject != null) {
+				gameObject.audio.PlayOneShot (audioClip, 0.7f);
+			}
            
         }
     }

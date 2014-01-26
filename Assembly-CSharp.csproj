@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Entity\Entity.cs" />
      <Compile Include="Assets\Scripts\Entity\EntityFactory.cs" />
      <Compile Include="Assets\Scripts\Entity\IEntityFactory.cs" />
+     <Compile Include="Assets\Scripts\FinishedGuiTextPlacer.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityGrid.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityGridManager.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\EntityPositionPlacerProperties.cs" />
