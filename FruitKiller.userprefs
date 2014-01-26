@@ -1,21 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelControllers\GameController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Score\CountdownTimer.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="49" Column="119" />
-      <File FileName="Assets\Scripts\Score\CountdownTimer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuStarter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FinishedGuiTextPlacer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Score\ScorePrinter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuButtons\MenuButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuButtons\IMenuButtonFactory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelControllers\MainMenuController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelControllers\CharacterSelectController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuButtons\MenuButtonFactory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Score\CountdownTimer.cs" Line="20" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Progress.cs" line="41" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
