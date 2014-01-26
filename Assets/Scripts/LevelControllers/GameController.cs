@@ -44,7 +44,9 @@ namespace Assets.Scripts.LevelControllers
         public void ShowMenu()
         {
             var prefab = Resources.Load("Prefabs/FinishMenu");
-            Instantiate(prefab, new Vector3(0, 0,0), Quaternion.identity);
+            var popup = Instantiate(prefab, new Vector3(0, 0,0), Quaternion.identity) as GameObject;
+			_menuButtonFactory.BuildButton(() => Application.LoadLevel("MainMenuScene"), "Prefabs/Buttons/BackToMenu", new Vector3(0, -0.7707841f, 0), popup);
+			_menuButtonFactory.BuildButton(() => Application.LoadLevel("GameScene"), "Prefabs/Buttons/Restart", new Vector3(0, -1.575618f, 0), popup);
         }
 		
 		public void Update()
