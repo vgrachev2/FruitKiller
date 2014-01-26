@@ -1,4 +1,6 @@
 ﻿using Assets.Scripts.Entity;
+using Assets.Scripts.EventHandlers.Entities;
+using Assets.Scripts.Events;
 using Assets.Scripts.Grid;
 using Assets.Scripts.Grid.EntityPositionCalculator;
 using Assets.Scripts.Grid.EntityPositionCalculator.Generators;
@@ -18,6 +20,8 @@ namespace Assets.Scripts {
 			var container = new Container();
 			container.RegisterType<MainMenuController>();
             container.RegisterType<GameController>();
+            container.RegisterType<EventManager>();
+		    var eventManager = EventManager.instance;
             container.RegisterType<CharacterSelectController>();
 			container.RegisterType<Entity.Entity>();
             container.RegisterType<IEntityGridCreator, RectangleGridCreator>();

@@ -1,4 +1,6 @@
-﻿using Assets.Scripts.Score;
+﻿using Assets.Scripts.Events;
+using Assets.Scripts.Events.Entities;
+using Assets.Scripts.Score;
 using Game.Common;
 using UnityDI;
 using UnityEngine;
@@ -33,6 +35,7 @@ namespace Assets.Scripts.Entity
                 if (Conroller.BeginTouched(this.gameObject))
                 {
                     ChangeScore();
+                    EventManager.instance.TriggerEvent(new EnitySelected());
                     Destroy(this.gameObject);
                 }
             }
