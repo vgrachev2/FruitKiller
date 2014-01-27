@@ -22,7 +22,7 @@ namespace Assets.Scripts.Grid.EntityPositionCalculator.Generators
                     var entityPosition = new Vector3(
                         startX + (properties.EntityDistance.x + properties.EntityScale.x)*j,
                         startY - (properties.EntityDistance.y + properties.EntityScale.y)*i, 0);
-                    grid.SetGridItem(i,j,new GridItem(position:entityPosition));
+                    grid.SetGridItem(j,i,new GridItem(position:entityPosition));
                 }
             }
             return grid;

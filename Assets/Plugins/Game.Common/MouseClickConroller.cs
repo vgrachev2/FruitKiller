@@ -4,7 +4,7 @@ namespace Game.Common
 {
     public class MouseClickConroller : ITouchConroller
     {
-        public bool Touched(GameObject gameObject)
+        public bool BeginTouched(GameObject gameObject)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -17,6 +17,11 @@ namespace Game.Common
 				}
             }
 
+            return false;
+        }
+
+        public bool CompleteTouched(GameObject gameObject)
+        {
             return false;
         }
     }

@@ -1,4 +1,6 @@
-﻿using Assets.Scripts.Score;
+﻿using Assets.Scripts.Events;
+using Assets.Scripts.Events.Entities;
+using Assets.Scripts.Score;
 using Game.Common;
 using UnityDI;
 using UnityEngine;
@@ -30,9 +32,18 @@ namespace Assets.Scripts.Entity
         {
             if (Conroller != null)
             {
-                if (Conroller.Touched(this.gameObject))
+                if (Conroller.BeginTouched(this.gameObject))
                 {
                     ChangeScore();
+                    if (Edible)
+                    {
+                        EventManager.instance.TriggerEvent(new EntityEatableSelected());
+                    }
+                    else
+                    {
+                        EventManager.instance.TriggerEvent(new EntityNotEatableSelected());
+                    }
+                    
                     Destroy(this.gameObject);
                 }
             }
