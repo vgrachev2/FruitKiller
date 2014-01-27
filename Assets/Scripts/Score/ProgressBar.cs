@@ -4,7 +4,7 @@ using System.Collections;
 public class ProgressBar:MonoBehaviour, IProgressBar
 {
 	public float barDisplay; //current progress
-	public Vector2 pos = new Vector2(80,500);
+    public Vector2 pos = new Vector2(-4.446732f, -3.61142f);
 	public Vector2 size = new Vector2(350,18);
 
 	
@@ -15,7 +15,10 @@ public class ProgressBar:MonoBehaviour, IProgressBar
 		var fullProgressBarStyle = new GUIStyle( GUI.skin.box );
 		fullProgressBarStyle.normal.background = MakeGradientTex( (int)size.x, (int)size.y, new Color(0.98f,1f,0.314f), new Color(1F,0.71f,0f));
 
-		GUI.BeginGroup(new Rect(pos.x, pos.y, size.x, size.y));
+        var correctScore = Camera.main.WorldToScreenPoint(pos);
+
+
+        GUI.BeginGroup(new Rect(correctScore.x, Screen.height - correctScore.y, size.x, size.y));
 		GUI.Box(new Rect(0,0, size.x, size.y), "",fullProgressBarStyle);
 
 		GUI.BeginGroup(new Rect(0,0, size.x * barDisplay, size.y));

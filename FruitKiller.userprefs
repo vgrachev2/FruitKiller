@@ -1,13 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Score\CountdownTimer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Plugins\Game.Common\AudioPlayer.cs">
     <Files>
-      <File FileName="Assets\Scripts\Score\CountdownTimer.cs" Line="20" Column="20" />
+      <File FileName="Assets\Scripts\Score\CountdownTimer.cs" Line="43" Column="18" />
+      <File FileName="Assets\Scripts\EventHandlers\Entities\PlayAudioOnEatableEntitySelected.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\Events\EventManager.cs" Line="112" Column="1" />
+      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="20" Column="14" />
+      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="52" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Progress.cs" line="41" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\Events\EventManager.cs" line="123" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

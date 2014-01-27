@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.EventHandlers.Entities
 {
-    public abstract class EventHandlerBase<TEvent> : IEventHandler<TEvent> where TEvent : IEvent
+    public abstract class EventHandlerBase<TEvent> : MonoBehaviour, IEventHandler<TEvent> where TEvent : IEvent
     {
         public abstract void HandleEvent(TEvent evt);
 
