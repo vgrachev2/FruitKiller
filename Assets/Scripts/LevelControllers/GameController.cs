@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets.Scripts.Events;
 using Assets.Scripts.Grid;
 using Assets.Scripts.Score;
 using Assets.Scripts.Score.ScorePlane;
@@ -21,7 +22,7 @@ namespace Assets.Scripts.LevelControllers
         private IEntityGridManager _entityGridManager;
         private IScorePlaneManipulator _scorePlaneManuManipulator;
         private ICountdownTimer _countdownTimer;
-		private IMenuButtonFactory _menuButtonFactory;
+
 		public void Start()
 		{
 		    var container = new ContainerInstaller().Install();
@@ -29,11 +30,10 @@ namespace Assets.Scripts.LevelControllers
 			var boundaryScale = Plane.transform.localScale;
 		    _entityGridManager = container.Resolve<IEntityGridManager>();
             _scorePrinter = container.Resolve<IScorePrinter>();
-			_menuButtonFactory = container.Resolve<IMenuButtonFactory>();
 		    var scoreManager = container.Resolve<IScoreManager>();
             _entityGridManager.InitializationGrid(boundaryCenterCoordinate, boundaryScale, EntityDistance, EntityScale);
 			var audioPlayer = container.Resolve<IAudioPlayer> ();
-			audioPlayer.Play ("victory");
+            audioPlayer.PlayLoop("MainTheme");
 		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
 		    _countdownTimer = container.Resolve<ICountdownTimer>();
             _countdownTimer.StartCountdown(30f, ShowMenu);
@@ -43,8 +43,7 @@ namespace Assets.Scripts.LevelControllers
 
         public void ShowMenu()
         {
-            var prefab = Resources.Load("Prefabs/FinishMenu");
-            Instantiate(prefab, new Vector3(0, 0,0), Quaternion.identity);
+            EventManager.instance.TriggerEvent(new GameFinished());
         }
 		
 		public void Update()

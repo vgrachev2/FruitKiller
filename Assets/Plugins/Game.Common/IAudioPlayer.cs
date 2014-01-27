@@ -9,5 +9,7 @@ namespace Assets.Plugins.Game.Common
     public interface IAudioPlayer
     {
         void Play(string name);
+
+        void PlayLoop(string name);
     }
 }

@@ -1,22 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Assets.Plugins.Game.Common;
-using Assets.Scripts.Events;
 using Assets.Scripts.Events.Entities;
 using UnityDI;
-using UnityEngine;
 
 namespace Assets.Scripts.EventHandlers.Entities
 {
-    public class PlayAudioOnEntitySelected : EventHandlerBase<EnitySelected>
+    public class PlayAudioOnNotEatableEntitySelected : EventHandlerBase<EntityNotEatableSelected>
     {
         [Dependency]
         public IAudioPlayer AudioPlayer { protected get; set; }
 
-        public override void HandleEvent(EnitySelected evt)
+        public override void HandleEvent(EntityNotEatableSelected evt)
         {
-            AudioPlayer.Play("click01");
+            AudioPlayer.Play("notEatable");
         }
     }
-
 }

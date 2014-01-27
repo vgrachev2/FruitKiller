@@ -17,7 +17,7 @@ namespace Assets.Scripts.Score
 			guiStyle.normal.textColor = new Color (0, 0.7f, 0);
 			GUI.Label (new Rect (correctScore.x, Screen.height-correctScore.y, 20, 20), ScoreManager.Correct.ToString(),guiStyle);
 			guiStyle.normal.textColor = Color.red;
-			GUI.Label (new Rect (incorrectScore.x, Screen.height-incorrectScore.y, 20, 20), ScoreManager.Correct.ToString (),guiStyle);
+			GUI.Label (new Rect (incorrectScore.x, Screen.height-incorrectScore.y, 20, 20), ScoreManager.Incorrect.ToString (),guiStyle);
 		}
     }
 }

@@ -18,8 +18,24 @@ namespace Assets.Plugins.Game.Common
 			var gameObject = GameObject.FindWithTag("MainCamera");
 			if (gameObject != null) {
 				gameObject.audio.PlayOneShot (audioClip, 0.7f);
+
 			}
            
+        }
+
+        public void PlayLoop(string name)
+        {
+            AudioClipLoader = new AudioClipLoader();
+            var audioClip = AudioClipLoader.Load(name);
+            var gameObject = GameObject.FindWithTag("MainCamera");
+            if (gameObject != null)
+            {
+                gameObject.audio.loop = true;
+                gameObject.audio.clip = audioClip;
+                gameObject.audio.Play();
+
+            }
+          
         }
     }
 }

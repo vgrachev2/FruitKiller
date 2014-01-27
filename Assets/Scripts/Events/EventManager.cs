@@ -29,8 +29,7 @@ namespace Assets.Scripts.Events
     {
         public bool LimitQueueProcesing = false;
         public float QueueProcessTime = 0.0f;
-        [Dependency]
-        public IDIContainer Container { private get; set; }
+
         private static EventManager s_Instance = null;
         public static EventManager instance
         {
@@ -40,6 +39,7 @@ namespace Assets.Scripts.Events
                 {
                     GameObject go = new GameObject("EventManager");
                     s_Instance = (EventManager)go.AddComponent(typeof(EventManager));
+                    var container = new ContainerInstaller().Install();
                     var handlers = s_Instance
                             .GetType()
                             .Assembly
@@ -49,7 +49,7 @@ namespace Assets.Scripts.Events
                     foreach (var handler in handlers)
                     {
                         var handlerInstance = (IEventHandler)Activator.CreateInstance(handler);
-						var gen = handler.BaseType.GetGenericArguments().ToList();
+                        container.BuildUp(handlerInstance);
                         s_Instance.AddListener(handlerInstance,
                             handler.BaseType.GetGenericArguments()
                                 .First(argument => argument.GetInterface("IEvent") != null)
@@ -78,11 +78,6 @@ namespace Assets.Scripts.Events
                 m_listenerTable.Add(eventName, new ArrayList());
 
             ArrayList listenerList = m_listenerTable[eventName] as ArrayList;
-            if (listenerList.Contains(handler))
-            {
-                Debug.Log("Event Manager: Listener: " + handler.GetType().ToString() + " is already in list for event: " + eventName);
-                return false; //handler already in list
-            }
 
             listenerList.Add(handler);
             return true;

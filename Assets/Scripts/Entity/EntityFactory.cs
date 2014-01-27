@@ -27,10 +27,6 @@ namespace Assets.Scripts.Entity {
             var entity = Instantiate(prefab, position, Quaternion.identity) as GameObject;
             var entityBehaivor = entity.GetComponent<Scripts.Entity.Entity>();
             DIContainer.BuildUp(entityBehaivor);
-            entity.AddComponent<OnDestroyAudioBehavior>();
-            var audioBehavior = entity.GetComponent<OnDestroyAudioBehavior>() as AudioBehaviorBase;
-            audioBehavior.AudioName = "click01";
-            DIContainer.BuildUp(audioBehavior);
             return entity;
 	    }
 

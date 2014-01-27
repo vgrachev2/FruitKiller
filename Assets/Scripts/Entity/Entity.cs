@@ -35,7 +35,15 @@ namespace Assets.Scripts.Entity
                 if (Conroller.BeginTouched(this.gameObject))
                 {
                     ChangeScore();
-                    EventManager.instance.TriggerEvent(new EnitySelected());
+                    if (Edible)
+                    {
+                        EventManager.instance.TriggerEvent(new EntityEatableSelected());
+                    }
+                    else
+                    {
+                        EventManager.instance.TriggerEvent(new EntityNotEatableSelected());
+                    }
+                    
                     Destroy(this.gameObject);
                 }
             }

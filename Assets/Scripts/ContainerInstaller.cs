@@ -31,6 +31,7 @@ namespace Assets.Scripts {
 			container.RegisterType<IScorePrinter, ScorePrinter>();
 			container.RegisterType<IAudioClipLoader,AudioClipLoader> ();
 			container.RegisterType<IAudioPlayer,AudioPlayer> ();
+		    container.RegisterType<IProgressBar, ProgressBar>();
 			container.RegisterInstance<IDIContainer>(container);
 			var entityFactory = new EntityFactory("Prefabs/Entities");
 			container.BuildUp(entityFactory);
