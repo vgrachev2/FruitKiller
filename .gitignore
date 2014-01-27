@@ -35,3 +35,4 @@ metadata
 0000000000000000c000000000000000
 
 /Assets/Plugins/Game.Common/bin
+*.meta
