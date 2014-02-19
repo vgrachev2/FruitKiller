@@ -20,6 +20,9 @@ namespace Assets.Scripts.Entity
         [Dependency]
         public IScoreManager ScoreManager { private get; set; }
 
+
+        public IEntitySpawner EntitySpawner { get; set; }
+
         // Use this for initialization
         void Start()
         {
@@ -35,6 +38,7 @@ namespace Assets.Scripts.Entity
                 if (Conroller.BeginTouched(this.gameObject))
                 {
                     ChangeScore();
+                    CreateNewEntityInColumn();
                     if (Edible)
                     {
                         EventManager.instance.TriggerEvent(new EntityEatableSelected());
@@ -47,6 +51,11 @@ namespace Assets.Scripts.Entity
                     Destroy(this.gameObject);
                 }
             }
+        }
+
+        private void CreateNewEntityInColumn()
+        {
+            EntitySpawner.Spawn();
         }
 
         private void ChangeScore()

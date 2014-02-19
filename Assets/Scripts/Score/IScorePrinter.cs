@@ -4,6 +4,9 @@ namespace Assets.Scripts.Score
 {
     public interface IScorePrinter
     {
-        void Print(Vector3 correctScorePlace, Vector3 incorrectScorePlace);
+        GameObject CorrectScorePlace { get; set; }
+        GameObject IncorrectScorePlace { get; set; }
+        int FontSize { get; set; }
+        void Print();
     }
 }

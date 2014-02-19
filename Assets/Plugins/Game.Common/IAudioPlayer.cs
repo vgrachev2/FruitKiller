@@ -11,5 +11,7 @@ namespace Assets.Plugins.Game.Common
         void Play(string name);
 
         void PlayLoop(string name);
+
+        void SetVolume(float volume);
     }
 }

@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -52,20 +52,26 @@
      <Compile Include="Assets\Scripts\Base\OnDestroyAudioBehavior.cs" />
      <Compile Include="Assets\Scripts\CharacterSelectStarter.cs" />
      <Compile Include="Assets\Scripts\ContainerInstaller.cs" />
+     <Compile Include="Assets\Scripts\ContainerSingletone.cs" />
      <Compile Include="Assets\Scripts\Entity\Entity.cs" />
      <Compile Include="Assets\Scripts\Entity\EntityFactory.cs" />
      <Compile Include="Assets\Scripts\Entity\IEntityFactory.cs" />
+     <Compile Include="Assets\Scripts\EntitySpawner.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\Audio\PlayVictoryAudioOnGameFinshed.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\Entities\PlayAudioOnEatableEntitySelected.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\Entities\PlayAudioOnEntitySelected.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\Entities\PlayAudioOnNotEatableEntitySelected.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\EventHandlerBase.cs" />
+     <Compile Include="Assets\Scripts\EventHandlers\Popups\ShowDescriptionStepsPopup.cs" />
+     <Compile Include="Assets\Scripts\EventHandlers\Popups\ShowPausePopup.cs" />
      <Compile Include="Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs" />
      <Compile Include="Assets\Scripts\Events\Entities\EnitySelected.cs" />
      <Compile Include="Assets\Scripts\Events\Entities\EntityEatableSelected.cs" />
      <Compile Include="Assets\Scripts\Events\Entities\EntityNotEatableSelected.cs" />
      <Compile Include="Assets\Scripts\Events\EventManager.cs" />
      <Compile Include="Assets\Scripts\Events\GameFinished.cs" />
+     <Compile Include="Assets\Scripts\Events\HowToPlayButtonClicked.cs" />
+     <Compile Include="Assets\Scripts\Events\PauseButtonClicked.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityGrid.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityGridManager.cs" />
      <Compile Include="Assets\Scripts\Grid\EntityPositionCalculator\EntityPositionPlacerProperties.cs" />
@@ -74,6 +80,7 @@
      <Compile Include="Assets\Scripts\Grid\GridItem.cs" />
      <Compile Include="Assets\Scripts\Grid\GridItemState.cs" />
      <Compile Include="Assets\Scripts\Grid\IEntityGridManager.cs" />
+     <Compile Include="Assets\Scripts\IEntitySpawner.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\CharacterSelectController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\GameController.cs" />
      <Compile Include="Assets\Scripts\LevelControllers\MainMenuController.cs" />
@@ -92,6 +99,7 @@
      <Compile Include="Assets\Scripts\Score\ScorePlane\ScorePlaneItem.cs" />
      <Compile Include="Assets\Scripts\Score\ScorePlane\ScorePlaneManipulator.cs" />
      <Compile Include="Assets\Scripts\Score\ScorePrinter.cs" />
+     <Compile Include="Assets\SoundSlider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

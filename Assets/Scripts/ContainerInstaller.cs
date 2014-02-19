@@ -21,27 +21,28 @@ namespace Assets.Scripts {
 			container.RegisterType<MainMenuController>();
             container.RegisterType<GameController>();
             container.RegisterType<EventManager>();
-		    var eventManager = EventManager.instance;
+		   
             container.RegisterType<CharacterSelectController>();
 			container.RegisterType<Entity.Entity>();
             container.RegisterType<IEntityGridCreator, RectangleGridCreator>();
 			container.RegisterType<IEntityGridManager, EntityGridManager>();
 			container.RegisterType<ITouchConroller, MouseClickConroller>();
 			container.RegisterType<IMenuButtonFactory, MenuButtonFactory>();
-			container.RegisterType<IScorePrinter, ScorePrinter>();
-			container.RegisterType<IAudioClipLoader,AudioClipLoader> ();
+		    container.RegisterType<IAudioClipLoader, AudioClipLoader>();
 			container.RegisterType<IAudioPlayer,AudioPlayer> ();
 		    container.RegisterType<IProgressBar, ProgressBar>();
+          
 			container.RegisterInstance<IDIContainer>(container);
 			var entityFactory = new EntityFactory("Prefabs/Entities");
 			container.BuildUp(entityFactory);
 			container.RegisterInstance<IEntityFactory>(entityFactory);
-			var scoreManager = new ScoreManager();
-			container.RegisterInstance<IScoreManager>(scoreManager);
-			var scorePlaneCreator = new ScorePlaneManipulator(10);
-            container.RegisterType<ICountdownTimer, CountdownTimer>();
+
 		
-			container.RegisterInstance<IScorePlaneManipulator> (scorePlaneCreator);
+			container.RegisterType<IScorePrinter,ScorePrinter>();
+			container.RegisterSingleton<IScoreManager,ScoreManager> ();
+            container.RegisterSingleton<ICountdownTimer, CountdownTimer>();
+		
+		
 			return container;
 		}
 	}

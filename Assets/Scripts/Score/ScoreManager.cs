@@ -11,9 +11,7 @@ namespace Assets.Scripts.Score
 
         public ScoreManager()
         {
-            _score = 0;
-            Correct = 0;
-            Incorrect = 0;
+            
         }
 
         public int Score
@@ -37,7 +35,6 @@ namespace Assets.Scripts.Score
         {
             _score += value;
             Correct++;
-            // ScoreManipulator.AddNewPlaneItem();
 
         }
 

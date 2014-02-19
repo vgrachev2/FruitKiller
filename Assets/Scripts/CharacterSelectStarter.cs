@@ -8,7 +8,7 @@ namespace Assets.Scripts {
 
 		public void Start()
 		{
-			var container = new ContainerInstaller().Install();
+			var container = ContainerSingletone.Container;
 			var controller = container.Resolve<CharacterSelectController>();
 			controller.BildCharacter(MenuPlaneLocal);
 		}

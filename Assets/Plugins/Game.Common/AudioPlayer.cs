@@ -37,5 +37,17 @@ namespace Assets.Plugins.Game.Common
             }
           
         }
+
+
+        public void SetVolume(float volume)
+        {
+            var gameObject = GameObject.FindWithTag("MainCamera");
+            if (gameObject != null)
+            {
+                gameObject.audio.volume=volume;
+           
+
+            }
+        }
     }
 }
