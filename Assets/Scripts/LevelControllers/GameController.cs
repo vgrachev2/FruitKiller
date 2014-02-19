@@ -61,7 +61,7 @@ namespace Assets.Scripts.LevelControllers
            audioPlayer.PlayLoop("MainTheme");
 		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
 		    _countdownTimer = container.Resolve<ICountdownTimer>();
-            _countdownTimer.StartCountdown(5f, ShowMenu);
+            _countdownTimer.StartCountdown(30f, ShowMenu);
 			_scorePrinter = container.Resolve<IScorePrinter> ();
 		    _scorePrinter.CorrectScorePlace = CorrectScorePlace;
 		    _scorePrinter.IncorrectScorePlace = IncorrectScorePlace;
