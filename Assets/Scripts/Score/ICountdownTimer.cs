@@ -12,6 +12,10 @@ namespace Assets.Scripts.Score
 
         void Update();
 
+        void Stop();
+
+        void Resume();
+
         void OnGUI();
     }
 }

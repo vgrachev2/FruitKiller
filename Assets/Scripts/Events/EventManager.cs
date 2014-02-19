@@ -39,7 +39,7 @@ namespace Assets.Scripts.Events
                 {
                     GameObject go = new GameObject("EventManager");
                     s_Instance = (EventManager)go.AddComponent(typeof(EventManager));
-                    var container = new ContainerInstaller().Install();
+                    var container = ContainerSingletone.Container;
                     var handlers = s_Instance
                             .GetType()
                             .Assembly

@@ -12,6 +12,7 @@ namespace Assets.Scripts.Score
         private float _startTime = 120.0f;
         private bool _showTimer = false;
         private Action _onFinish;
+
         [Dependency]
         public IProgressBar ProgressBar { private get; set; }
 
@@ -23,18 +24,19 @@ namespace Assets.Scripts.Score
             _showTimer = true;
             _onFinish = onFinish;
         }
-         
-        public void Update() 
+
+        public void Update()
         {
             if (_showTimer)
             {
-				if(_timer==0){
-					return;
-				}
+                if (_timer == 0)
+                {
+                    return;
+                }
                 ProgressBar.Update(_timer/30);
                 _timer -= Time.deltaTime;
 
-				if (_timer < 10)
+                if (_timer < 10)
                 {
                     Debug.Log("TEN SECONDS LEFT !");
                 }
@@ -49,11 +51,24 @@ namespace Assets.Scripts.Score
             }
         }
 
-        public void OnGUI() 
+        public void OnGUI()
         {
-            GUI.Label(new Rect(10, 10, 150, 20), String.Format("{0:00}:{1:00}", _timer / 60.0, _timer % 60.0));
+            GUI.Label(new Rect(10, 10, 150, 20), String.Format("{0:00}:{1:00}", _timer/60.0, _timer%60.0));
             ProgressBar.OnGui();
-            
+
         }
+
+
+        public void Stop()
+        {
+            _showTimer = false;
+
+        }
+
+        public void Resume()
+        {
+            _showTimer = true;
+        }
+
     }
 }
