@@ -13,6 +13,7 @@ namespace Assets.Scripts.Entity
         
         public bool Edible;
         public string Name;
+		public Color ColorExplosive;
 
         [Dependency]
         public ITouchConroller Conroller  { private get; set; }
@@ -48,7 +49,7 @@ namespace Assets.Scripts.Entity
                         EventManager.instance.TriggerEvent(new EntityNotEatableSelected());
                     }
                     
-                    Destroy(this.gameObject);
+                    Delete();
                 }
             }
         }
@@ -56,6 +57,22 @@ namespace Assets.Scripts.Entity
         private void CreateNewEntityInColumn()
         {
             EntitySpawner.Spawn();
+        }
+
+        private void EmulateExplosion(){
+			var prefab = Resources.Load ("Prefabs/Additions/DestroyExplosion");
+            
+			var position = this.gameObject.transform.position;
+			var component = Instantiate (prefab, new Vector3 (position.x, position.y, -10), Quaternion.identity) as GameObject;
+			ParticleSystemColorSet(component.particleSystem);
+		}
+
+        private void ParticleSystemColorSet(ParticleSystem m_currentParticleEffect)
+        {
+
+            //var psColor = Color.Lerp(ColorExplosive, Color.white,1f);
+			var color = Color.black;
+			m_currentParticleEffect.startColor = ColorExplosive;
         }
 
         private void ChangeScore()
@@ -70,9 +87,16 @@ namespace Assets.Scripts.Entity
             }
         }
 
-        void Delete()
-        {
-            Destroy(this);
+        void Delete(){
+			this.gameObject.renderer.sortingOrder = 0;
+            EmulateExplosion();
+          //  StartAnimation();
+            Destroy(this.gameObject);
+        }
+
+        private void StartAnimation(){
+            var component = this.GetComponent<Animator>();
+            component.SetTrigger("Destroy");
         }
     }
 }

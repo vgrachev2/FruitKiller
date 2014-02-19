@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ContainerInstaller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Entity\Entity.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="94" Column="10" />
-      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="28" Column="1" />
+      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ContainerInstaller.cs" Line="24" Column="6" />
-      <File FileName="Assets\Scripts\Events\EventManager.cs" Line="42" Column="1" />
+      <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="83" Column="38" />
+      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -14,6 +15,7 @@
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="3" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="28" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="25" />
+      <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\Scripts\Entity\Entity.cs" line="82" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

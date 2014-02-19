@@ -15,6 +15,7 @@ namespace Game.Common
 
                     if (gameObject.collider.Raycast(cursorRay, out hit, 1000.0f))
                     {
+
                         return true;
                     }
                 }
