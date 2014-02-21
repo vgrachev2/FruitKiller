@@ -12,9 +12,9 @@ namespace Assets.Scripts.LevelControllers {
 		public void BildStartButton(GameObject plane)
 		{
             ButtonFactory.BuildButton(() =>  EventManager.instance.TriggerEvent(new HowToPlayButtonClicked()), 
-                
-                
-                "Prefabs/Buttons/StartButton", new Vector3(0, -2, -5),plane);
+                "Prefabs/Buttons/StartButton", new Vector3(0, -2, 0),plane);
+
+            ButtonFactory.BuildButton(() => EventManager.instance.TriggerEvent(new PauseButtonClicked()), "Prefabs/Buttons/SettingsButton", new Vector3(4.622211f, -3.440617f, 0), plane);
 		}
 
 	  

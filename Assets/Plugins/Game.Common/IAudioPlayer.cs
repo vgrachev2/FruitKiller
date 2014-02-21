@@ -13,5 +13,9 @@ namespace Assets.Plugins.Game.Common
         void PlayLoop(string name);
 
         void SetVolume(float volume);
+
+        float GetVolume();
+
+        void PlayWithLoopPause(string name);
     }
 }

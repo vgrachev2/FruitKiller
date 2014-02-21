@@ -12,8 +12,9 @@ public class SoundSlider : MonoBehaviour {
 
     public GameObject SliderPlace;
 	// Use this for initialization
-	void Start () {
-	
+	void Start (){
+	   var currentVolume= _audioPlayer.GetVolume();
+	    _vSliderValue = currentVolume*10;
 	}
 	
 	// Update is called once per frame

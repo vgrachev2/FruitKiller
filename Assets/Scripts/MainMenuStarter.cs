@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.LevelControllers;
+﻿using Assets.Plugins.Game.Common;
+using Assets.Scripts.LevelControllers;
 using UnityEngine;
 
 namespace Assets.Scripts {
@@ -12,7 +13,8 @@ namespace Assets.Scripts {
 			var container = ContainerSingletone.Container;
 			var controller = container.Resolve<MainMenuController>();
 			controller.BildStartButton(MenuPlaneLocal);
-          
+			var audioPlayer = container.Resolve<IAudioPlayer>();
+			audioPlayer.PlayLoop("MainTheme");
           
 		}
 

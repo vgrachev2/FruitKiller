@@ -8,7 +8,7 @@ namespace Game.Common
         {
             if (Input.GetMouseButtonDown(0))
             {
-				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.up);
 				if(hit.collider!=null){
 				if(hit.collider.transform.gameObject == gameObject)
 				{

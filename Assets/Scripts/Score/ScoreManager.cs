@@ -43,6 +43,12 @@ namespace Assets.Scripts.Score
             _score -= value;
             Incorrect++;
         }
+
+
+        public void Clear(){
+            Correct = 0;
+            Incorrect = 0;
+        }
     }
 
 }

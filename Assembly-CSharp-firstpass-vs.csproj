@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\Game.Common\AudioClipLoader.cs" />
      <Compile Include="Assets\Plugins\Game.Common\AudioPlayer.cs" />
+     <Compile Include="Assets\Plugins\Game.Common\DontDestroyOnLoadGameObjectScript.cs" />
      <Compile Include="Assets\Plugins\Game.Common\IAudioClipLoader.cs" />
      <Compile Include="Assets\Plugins\Game.Common\IAudioPlayer.cs" />
      <Compile Include="Assets\Plugins\Game.Common\ITouchConroller.cs" />
