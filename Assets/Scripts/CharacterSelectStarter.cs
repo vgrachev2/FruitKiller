@@ -10,6 +10,8 @@ namespace Assets.Scripts {
 		{
 			var container = ContainerSingletone.Container;
 			var controller = container.Resolve<CharacterSelectController>();
+            controller.PlayMusic();
+            controller.BuildBackButton(MenuPlaneLocal);
 			controller.BildCharacter(MenuPlaneLocal);
 		}
 	}

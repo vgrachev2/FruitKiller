@@ -30,11 +30,7 @@ namespace Assets.Scripts.EventHandlers.Popups
 
             }, "Prefabs/Buttons/ExitButton", new Vector3(3.079204f, 2.25636f,0f ), popup);
 
-            _menuButtonFactory.BuildButton(() =>
-            {
-                Application.LoadLevel("MakeChoiseCharacter");
-
-            }, "Prefabs/Buttons/GoGame", new Vector3(0.04272377f, -1.592054f, 0f), popup);
+            _menuButtonFactory.BuildButton(() => Application.LoadLevel("MakeChoiseCharacter"), "Prefabs/Buttons/GoGame", new Vector3(0.04272377f, -1.592054f, 0f), popup);
         }
     }
 }
