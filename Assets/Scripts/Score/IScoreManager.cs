@@ -11,6 +11,7 @@ namespace Assets.Scripts.Score
        int Incorrect { get; }
        void PlusValueToScore(int value);
        void MinusValueToScore(int value);
-      
+        void Clear();
+
     }
 }

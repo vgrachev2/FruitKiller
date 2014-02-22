@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs">
     <Files>
@@ -8,11 +9,30 @@
       <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\SoundSlider.cs" Line="21" Column="1" />
       <File FileName="Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs" Line="28" Column="8" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ContainerSingletone.cs">
+    <Files>
+      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="114" Column="1" />
+      <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Entity\Entity.cs" Line="75" Column="56" />
+      <File FileName="Assets\Scripts\LevelControllers\CharacterSelectController.cs" Line="54" Column="1" />
+      <File FileName="Assets\Scripts\LevelControllers\MainMenuController.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuStarter.cs" Line="14" Column="61" />
+      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="67" Column="1" />
+      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="13" Column="35" />
+>>>>>>> 61de1866c76d00e6af264cbfbdbef44c9d1a2705
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="3" />
+<<<<<<< HEAD
+=======
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="28" />
+      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="25" />
+      <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\Plugins\Game.Common\AudioPlayer.cs" line="59" />
+>>>>>>> 61de1866c76d00e6af264cbfbdbef44c9d1a2705
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

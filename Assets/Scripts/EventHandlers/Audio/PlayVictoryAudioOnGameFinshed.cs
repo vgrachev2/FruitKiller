@@ -16,7 +16,7 @@ namespace Assets.Scripts.EventHandlers.Audio
 
         public override void HandleEvent(GameFinished evt)
         {
-            AudioPlayer.Play("victory");
+            AudioPlayer.PlayWithLoopPause("victory");
         }
     }
 }

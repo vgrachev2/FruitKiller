@@ -29,7 +29,7 @@ namespace Assets.Scripts {
 			container.RegisterType<ITouchConroller, MouseClickConroller>();
 			container.RegisterType<IMenuButtonFactory, MenuButtonFactory>();
 		    container.RegisterType<IAudioClipLoader, AudioClipLoader>();
-			container.RegisterType<IAudioPlayer,AudioPlayer> ();
+			container.RegisterSingleton<IAudioPlayer,AudioPlayer> ();
 		    container.RegisterType<IProgressBar, ProgressBar>();
           
 			container.RegisterInstance<IDIContainer>(container);

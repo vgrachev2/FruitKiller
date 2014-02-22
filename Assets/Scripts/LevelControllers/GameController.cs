@@ -58,7 +58,7 @@ namespace Assets.Scripts.LevelControllers
 			var scoreManager = container.Resolve<IScoreManager>();
 
 			var audioPlayer = container.Resolve<IAudioPlayer> ();
-           audioPlayer.PlayLoop("MainTheme");
+            audioPlayer.PlayLoop("MainTheme");
 		    scoreManager.ScoreManipulator = _scorePlaneManuManipulator;
 		    _countdownTimer = container.Resolve<ICountdownTimer>();
             _countdownTimer.StartCountdown(30f, ShowMenu);
@@ -68,13 +68,14 @@ namespace Assets.Scripts.LevelControllers
 		    _scorePrinter.FontSize = fontSize;
 		    _menuButtonFactory = container.Resolve<IMenuButtonFactory>();
 			BuildSelectedCharacter ();
-		    BuildSettingsButton();
+		    BuildAdditionalButton();
 
 		}
 
-        private void BuildSettingsButton()
+        private void BuildAdditionalButton()
         {
             _menuButtonFactory.BuildButton(() => EventManager.instance.TriggerEvent(new PauseButtonClicked()), "Prefabs/Buttons/SettingsButton", new Vector3(1.156599f, -0.611589f, 0), this.gameObject);
+            _menuButtonFactory.BuildButton(() => Application.LoadLevel("MainMenuScene"), "Prefabs/Buttons/Back", new Vector3(-0.4954042f, 0.5888867f, 0), this.gameObject);
         }
 
 
