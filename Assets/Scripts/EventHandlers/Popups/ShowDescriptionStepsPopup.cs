@@ -23,7 +23,7 @@ namespace Assets.Scripts.EventHandlers.Popups
         {
 
             var prefab = Resources.Load("Prefabs/DescriptionStepsPopup");
-            var popup = Instantiate(prefab, new Vector3(0, 0, 2), Quaternion.identity) as GameObject;
+            var popup = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
             _menuButtonFactory.BuildButton(() =>
             {
                 Destroy(popup);
