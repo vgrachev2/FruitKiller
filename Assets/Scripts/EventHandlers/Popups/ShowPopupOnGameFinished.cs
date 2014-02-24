@@ -50,7 +50,7 @@ namespace Assets.Scripts.EventHandlers.Popups
             Player.PlayLoop("MainTheme");
             ClearStatistics();
         }
-
+         
         private void ClearStatistics(){
             ScoreManager.Clear();
         }

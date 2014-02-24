@@ -1,15 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ContainerSingletone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Plugins\Game.Common\MouseClickConroller.cs">
     <Files>
       <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="114" Column="1" />
       <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Entity\Entity.cs" Line="75" Column="56" />
-      <File FileName="Assets\Scripts\LevelControllers\CharacterSelectController.cs" Line="54" Column="1" />
-      <File FileName="Assets\Scripts\LevelControllers\MainMenuController.cs" Line="23" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuStarter.cs" Line="14" Column="61" />
-      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="67" Column="1" />
-      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="13" Column="35" />
+      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="72" Column="3" />
+      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="24" Column="47" />
+      <File FileName="Assets\Plugins\Game.Common\MouseClickConroller.cs" Line="11" Column="102" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -18,7 +16,7 @@
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="3" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="28" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="25" />
-      <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\Plugins\Game.Common\AudioPlayer.cs" line="59" />
+      <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\SoundSlider.cs" line="16" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
