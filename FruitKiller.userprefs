@@ -1,22 +1,48 @@
 ﻿<Properties>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs">
+    <Files>
+      <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="113" Column="1" />
+      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="28" Column="21" />
+      <File FileName="Assets\Scripts\ContainerInstaller.cs" Line="40" Column="3" />
+      <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\SoundSlider.cs" Line="21" Column="1" />
+      <File FileName="Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs" Line="28" Column="8" />
+=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Plugins\Game.Common\MouseClickConroller.cs">
     <Files>
       <File FileName="Assets\Scripts\LevelControllers\GameController.cs" Line="114" Column="1" />
       <File FileName="Assets\Scripts\Events\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Entity\Entity.cs" Line="75" Column="56" />
+<<<<<<< HEAD
+      <File FileName="Assets\Scripts\LevelControllers\CharacterSelectController.cs" Line="54" Column="1" />
+      <File FileName="Assets\Scripts\LevelControllers\MainMenuController.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuStarter.cs" Line="14" Column="61" />
+      <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="67" Column="1" />
+      <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="13" Column="35" />
+>>>>>>> 61de1866c76d00e6af264cbfbdbef44c9d1a2705
+=======
       <File FileName="Assets\Plugins\Game.Common\AudioPlayer.cs" Line="72" Column="3" />
       <File FileName="Assets\Scripts\ContainerSingletone.cs" Line="24" Column="47" />
       <File FileName="Assets\Plugins\Game.Common\MouseClickConroller.cs" Line="11" Column="102" />
+>>>>>>> 79ec59d73dcb1b1e154d3dd8699a313d9ead7ff3
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\EventHandlers\Popups\ShowPopupOnGameFinished.cs" line="28" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="3" />
+<<<<<<< HEAD
+=======
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="28" />
       <Breakpoint file="C:\Users\drnor_000\Documents\FruitKiller\Assets\Scripts\ContainerSingletone.cs" line="25" />
+<<<<<<< HEAD
+      <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\Plugins\Game.Common\AudioPlayer.cs" line="59" />
+>>>>>>> 61de1866c76d00e6af264cbfbdbef44c9d1a2705
+=======
       <Breakpoint file="C:\Users\ПРОГРАММИСТ-2\Documents\UnityProject\FruitKiller\Assets\SoundSlider.cs" line="16" />
+>>>>>>> 79ec59d73dcb1b1e154d3dd8699a313d9ead7ff3
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
